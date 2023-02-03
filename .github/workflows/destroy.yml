@@ -1,0 +1,20 @@
+name: Terraform Destroy
+
+on:
+  workflow_dispatch:
+    inputs:
+      Select:
+        description: "Terraform destroy"
+        required: true
+        default: "destroy"
+        type: choice
+        options:
+          - "destroy"
+jobs:
+  destroy:
+    runs-on: ubuntu:latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        
+          
