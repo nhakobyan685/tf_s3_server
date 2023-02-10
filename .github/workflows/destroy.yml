@@ -28,3 +28,6 @@ jobs:
       run : terraform init
     - name : Terraform destoy
       run : terraform ${{ inputs.Select }} -auto-approve
+#         run : terraform init
+#         #terraform workspace select s3_destroy
+#         run: terraform import -var 'access_key={{ secrets.AWS_ACCESS_KEY }}' -var 'secret_key={{ secrets.AWS_SECRET_KEY }}' <resource_type>.<resource_name> <id>
