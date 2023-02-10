@@ -11,4 +11,9 @@ terraform {
       version = "4.54.0"
     }
   }
+  backend "s3" {
+    bucket = "nhakobyan685"
+    key    = "dev/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
